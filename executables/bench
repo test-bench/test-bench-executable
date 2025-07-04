@@ -1,0 +1,7 @@
+#!/usr/bin/env ruby
+
+require 'test_bench'
+
+exit_code = TestBench::Executable.()
+
+exit(exit_code)
