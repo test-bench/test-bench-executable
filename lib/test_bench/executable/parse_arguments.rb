@@ -89,9 +89,9 @@ module TestBench
             ].compact.join(':')
 
           when '-d', '--detail'
-            env['TEST_BENCH_OUTPUT_DETAIL'] = 'on'
+            env['TEST_BENCH_DETAIL'] = 'on'
           when '-D', '--no-detail'
-            env['TEST_BENCH_OUTPUT_DETAIL'] = 'off'
+            env['TEST_BENCH_DETAIL'] = 'off'
 
           when '--device'
             device = require_next_argument(switch)
@@ -202,7 +202,7 @@ The following environment variables can also control execution:
   TEST_BENCH_STRICT                     See --strict
   TEST_BENCH_RANDOM_SEED                See --random-seed
   TEST_BENCH_FILTER_BACKTRACE_PATTERN   See --filter-backtrace
-  TEST_BENCH_OUTPUT_DETAIL              See --detail
+  TEST_BENCH_DETAIL                     See --detail
   TEST_BENCH_OUTPUT_DEVICE              See --device
   TEST_BENCH_OUTPUT_LEVEL               See --output-level
   TEST_BENCH_OUTPUT_STYLING             See --output-styling

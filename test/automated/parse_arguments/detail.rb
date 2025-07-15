@@ -6,7 +6,7 @@ context "Parse Arguments" do
       parse_arguments = ParseArguments.new(['-d'])
       parse_arguments.()
 
-      env_text = parse_arguments.env['TEST_BENCH_OUTPUT_DETAIL']
+      env_text = parse_arguments.env['TEST_BENCH_DETAIL']
 
       comment env_text.inspect
 
@@ -19,7 +19,7 @@ context "Parse Arguments" do
       parse_arguments = ParseArguments.new(['-D'])
       parse_arguments.()
 
-      env_text = parse_arguments.env['TEST_BENCH_OUTPUT_DETAIL']
+      env_text = parse_arguments.env['TEST_BENCH_DETAIL']
 
       comment env_text.inspect
 
@@ -32,7 +32,7 @@ context "Parse Arguments" do
       parse_arguments = ParseArguments.new(['--detail'])
       parse_arguments.()
 
-      env_text = parse_arguments.env['TEST_BENCH_OUTPUT_DETAIL']
+      env_text = parse_arguments.env['TEST_BENCH_DETAIL']
 
       comment env_text.inspect
 
@@ -45,7 +45,7 @@ context "Parse Arguments" do
       parse_arguments = ParseArguments.new(['--no-detail'])
       parse_arguments.()
 
-      env_text = parse_arguments.env['TEST_BENCH_OUTPUT_DETAIL']
+      env_text = parse_arguments.env['TEST_BENCH_DETAIL']
 
       comment env_text.inspect
 
