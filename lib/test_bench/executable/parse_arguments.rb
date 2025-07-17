@@ -27,6 +27,12 @@ module TestBench
         arguments ||= ::ARGV
         env ||= ::ENV
 
+        options_env_var = env['TEST_BENCH_OPTIONS']
+        if not options_env_var.nil?
+          env_arguments = Shellwords.split(options_env_var)
+          arguments.unshift(*env_arguments)
+        end
+
         instance = new(arguments)
 
         instance.env = env
@@ -207,6 +213,7 @@ The following environment variables can also control execution:
   TEST_BENCH_OUTPUT_LEVEL               See --output-level
   TEST_BENCH_OUTPUT_STYLING             See --output-styling
   TEST_BENCH_DEFAULT_TEST_PATH          Specifies default path
+  TEST_BENCH_OPTIONS                    Evaluated as command line arguments similar to RUBYOPT
 
             TEXT
             exit(true)

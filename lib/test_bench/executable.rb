@@ -1,3 +1,5 @@
+require 'shellwords'
+
 require 'test_bench/run'
 
 require 'test_bench/executable/defaults'
